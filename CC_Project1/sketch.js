@@ -1,53 +1,4 @@
-// //global variables
-// var xAxis = 1;
-// var yAxis = 2;
-// var blue, black;
 
-// function setup() {
-//   createCanvas(windowWidth, windowHeight);
-//   // background(0, 6, 36);
-//   blue = color(0 ,4, 28);
-//   black = color(0);
-
-// }
-
-// function draw() {
-// 	fill(25, 8, 1);
-// 	rect(0, 500, windowWidth, 250);
-
-// 	setGradient(0, 0, width, height, blue, black, yAxis);
-
-  
-// }
-
-// function gradient (x, y w, h, blue, black, axis) {
-
-// nofill();
-
-// if (axis == yAxis) {
-
-// for (var i = y; i <= y+h, i++) {
-
-// 	var inter = map(i, y, y+h, 0, 1);
-// 	var c = lerpColor(blue, black, inter);
-// 	stroke(c);
-// 	line(x, i, x+w, i);
-// 		}
-// 	}
-
-// else if (axis == xAxis) {
-
-// for (var i = x; i<= x+w; i++) {
-
-// 	var inter = map(i, x, x+w, 0, 1);
-// 	var c = lerpColor(blue, black, inter);
-// 	stroke(c);
-// 	line(i, y, i, y+h);
-// 		}
-// 	}
-
-
-// }
 var Y_AXIS = 1;
 var X_AXIS = 2;
 var b1, b2, c1, c2;
@@ -60,7 +11,6 @@ function setup() {
   b2 = color(0);
   c1 = color(204, 102, 0);
   c2 = color(0, 102, 153);
-
   noLoop();
 }
 
@@ -71,7 +21,7 @@ function draw() {
   // Foreground
   // setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
   // setGradient(50, 190, 540, 80, c2, c1, X_AXIS);
-  fill(25, 8, 1);
+  fill(18, 6, 0);
   rect(0, 500, windowWidth, 250);
 
   //MAKE A JACK-O-LANTERN
@@ -93,12 +43,81 @@ function draw() {
   ellipse(830, 450, 100, 285);
 
   fill(232, 114, 12); //pumpkin layer 3
-  ellipse(750, 450, 225, 300);
+  ellipse(725, 450, 125, 290);
+  ellipse(775, 450, 125, 290);
+
+  //MAKE PUMPKIN STEM
+
 
   //MAKE EYES FOR THE JACK-O-LANTERN
   
-  fill(0);
-  curve(650,550,635,577,645,608,570,598);
+  //fill(56, 19, 3);
+  
+  if (mouseIsPressed) {for (var i = 0; i <= 0; i++) {
+  	fill(255);
+  }} else {fill(56, 19, 3);}
+  triangle(630, 425, 610, 375, 700, 425);
+  triangle(865, 425, 885, 375, 795, 425);
+
+  //MAKE SCARY PUMPKIN LAUGH
+
+  //fill(56, 19, 3);
+  beginShape(TRIANGLES);
+
+vertex(650, 550);
+vertex(610, 450);
+vertex(700, 525);
+
+vertex(660, 535);
+vertex(670, 465);
+vertex(700, 560);
+
+vertex(680, 525);
+vertex(700, 485);
+vertex(725, 560);
+
+vertex(725, 560);
+vertex(700, 485);
+vertex(740, 550);
+
+vertex(725, 530);
+vertex(740, 485);
+vertex(740, 550);
+
+vertex(740, 550);
+vertex(740, 485);
+vertex(760, 570);
+
+vertex(760, 570);
+vertex(740, 510);
+vertex(780, 495);
+
+vertex(760, 570);
+vertex(760, 510);
+vertex(810, 500);
+
+vertex(780, 570);
+vertex(760, 510);
+vertex(810, 500);
+
+vertex(780, 570);
+vertex(810, 500);
+vertex(830, 550);
+
+vertex(810, 500);
+vertex(840, 465);
+vertex(830, 550);
+
+vertex(825, 520);
+vertex(840, 465);
+vertex(850, 550);
+
+vertex(825, 520);
+vertex(885, 435);
+vertex(850, 550);
+endShape();
+  
+ 
 }
 
 function setGradient(x, y, w, h, c1, c2, axis) {
@@ -120,5 +139,16 @@ function setGradient(x, y, w, h, c1, c2, axis) {
       stroke(c);
       line(i, y, i, y+h);
     }
+  }
+
+  function flicker() {
+
+  	if (keyIsPressed) {
+  		fill(255);
+  	} else {
+  		fill(56, 19, 3);
+  	}
+  	
+
   }
 }
