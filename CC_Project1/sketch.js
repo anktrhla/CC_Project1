@@ -182,12 +182,12 @@ function setGradient(x, y, w, h, c1, c2, axis) {
   }
 }
 
-// make a function to load sound in the backgound
+// make a function to load sound in the backgound (NOT WORKING; TO DO: FIX IT!!!)
 
-fucntion loadedDracula () {
+// fucntion loadedDracula () {
 
-	audioDracula.loop(); //loop the song through the entire time the sketch is being played.
-}
+// 	audioDracula.loop(); //loop the song through the entire time the sketch is being played.
+// }
 
 
 // make bats function to invoke bats on the background
