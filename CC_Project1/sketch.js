@@ -1,7 +1,7 @@
 /*
 Since it's Halloween time right around the corner, I picked up the adjective "SCARY"!
 
-I will be making a typical Halloween landscape with an interactive Jack-o-Lantern, with bats and ghosts roaming around in the background
+It will be making a typical Halloween landscape with an interactive Jack-o-Lantern, with bats and ghosts roaming around in the background
 There will also be background halloween theme music.
 */
 
@@ -25,6 +25,11 @@ function setup() {
   b1 = color(0, 4, 50); //midnight blue
   b2 = color(0); //black
   bat.push(new bats(batX, batY));
+
+
+// Load sound into the sketch
+  // audioDracula = loadSound("dracula_theme.mp3", loadedDracula);
+  // audioWitch = loadSound("witches_potion.mp3", loadedWitch);
   
 }
 
@@ -176,6 +181,14 @@ function setGradient(x, y, w, h, c1, c2, axis) {
     }
   }
 }
+
+// make a function to load sound in the backgound
+
+fucntion loadedDracula () {
+
+	audioDracula.loop(); //loop the song through the entire time the sketch is being played.
+}
+
 
 // make bats function to invoke bats on the background
 
